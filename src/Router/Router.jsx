@@ -9,6 +9,7 @@ import Register from "../Pages/Register";
 import MyQueries from "../Pages/My Queries/MyQueries";
 import AddQquery from "../Pages/AddQuery/AddQquery";
 import Queries from "../Pages/Qreuries/Queries";
+import QueryDetails from "../Pages/Qreuries/Component/QueryDetails";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -39,6 +40,12 @@ const router = createBrowserRouter([
           path:'/queries',
           element:<Queries/>,
           loader: () => fetch('http://localhost:5000/products')
+        },
+        {
+          path:'/queryDetails/:id',
+          element:<QueryDetails></QueryDetails>,
+          loader: ({params}) => fetch(`http://localhost:5000/query/${params.id}`)
+          
         }
       ]
     },
