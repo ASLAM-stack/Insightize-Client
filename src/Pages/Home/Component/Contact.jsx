@@ -1,4 +1,4 @@
-import logo from '../../../../public/contact.png'
+import logo from '/contact.png'
 
 const Contact = () => {
     return (

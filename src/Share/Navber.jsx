@@ -9,7 +9,7 @@ const Navber = () => {
     const [theme,setTheme] = useState('light');
 
     useEffect(() =>{
-        // localStorage.setItem('theme',theme)
+        localStorage.setItem('theme',theme)
         const localTheme = localStorage.getItem('theme')
         document.querySelector('html').setAttribute('data-theme',localTheme)
     },[theme])

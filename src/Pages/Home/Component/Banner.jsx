@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
     return (
-        <div className=" space-y-4 w-full pl-4 md:pl-16 h-[500px] bg-cover flex flex-col justify-center bg-center rounded-2xl  mt-24 banner">
+        <div className=" space-y-4 w-full pl-4 md:pl-16 h-[500px] bg-cover flex flex-col justify-center bg-center rounded-2xl  mt-24 banner banner_home">
                          <div className="space-y-2 border-l-2 pl-4 border-[#c65ce0d2]">
             <JackInTheBox direction='down' triggerOnce={true}>
               <p className="text-xl font-medium  text-[#e64210ec]">Welcome to <span className="font-satis"> Insightize</span></p>

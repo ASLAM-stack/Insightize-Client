@@ -25,10 +25,16 @@ border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .banner{
-    background:linear-gradient(90deg,rgba(0, 0, 0, 0.568),rgba(70, 4, 4, 0.603)) ,url('../public/banner.jpg');
+    background:linear-gradient(90deg,rgba(0, 0, 0, 0.568),rgba(70, 4, 4, 0.603)) ,url('/banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
      background-position: right;
+}
+.banner_my{
+    background:linear-gradient(90deg,rgba(0, 0, 0, 0.568),rgba(70, 4, 4, 0.603)) ,url('/myquery.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .font-pop{
     font-family: "Poppins", sans-serif;
