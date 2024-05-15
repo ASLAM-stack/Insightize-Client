@@ -22,7 +22,7 @@ const AddQquery = () => {
         const {displayName,email,photoURL} = user;
         const queryInfo = {product_Name,product_Brand,product_Image,query_Title,boycott_Reason,displayName,email,photoURL,recommendationCount,currentDateAndTime}
         console.log(queryInfo);
-        fetch('http://localhost:5000/products/',{
+        fetch('https://insightize-server.vercel.app/products/',{
             method:"POST",
             headers: {
                 "content-type" : "application/json"

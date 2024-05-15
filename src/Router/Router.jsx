@@ -47,14 +47,14 @@ const router = createBrowserRouter([
         {
           path:'/queries',
           element:<Queries/>,
-          loader: () => fetch('http://localhost:5000/products')
+          loader: () => fetch('https://insightize-server.vercel.app/products')
         },
         {
           path:'/queryDetails/:id',
           element:<PrivateRouter>
             <QueryDetails></QueryDetails>
           </PrivateRouter>,
-          loader: ({params}) => fetch(`http://localhost:5000/query/${params.id}`)
+          loader: ({params}) => fetch(`https://insightize-server.vercel.app/query/${params.id}`)
           
         },
         {
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
         {
           path:'/update/:id',
           element:<UpdateQuery></UpdateQuery>,
-          loader: ({params}) => fetch(`http://localhost:5000/query/${params.id}`)
+          loader: ({params}) => fetch(`https://insightize-server.vercel.app/query/${params.id}`)
         }
       ]
     },

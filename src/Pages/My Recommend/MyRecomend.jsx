@@ -17,7 +17,7 @@ const MyRecomend = () => {
     const {data,isLoading,refetch} =useQuery({
         queryKey:['recommended'],
           queryFn:async () =>{
-            const res= await fetch(`http://localhost:5000/my_recommendation/${user.email}`)
+            const res= await fetch(`https://insightize-server.vercel.app/my_recommendation/${user.email}`)
             const data = await res.json()
             return data ;
           }

@@ -56,13 +56,13 @@ const AuthProvider = ({children}) => {
             setUser(currentUser);
             if (currentUser) {
               axios
-                .post('http://localhost:5000/jwt', userEmail, {
+                .post('https://insightize-server.vercel.app/jwt', userEmail, {
                   withCredentials: true,
                 })
                 .then(res => console.log(res.data));
             } else {
               axios
-                .post('http://localhost:5000/jwt/logout', userEmail, {
+                .post('https://insightize-server.vercel.app/jwt/logout', userEmail, {
                   withCredentials: true,
                 })
                 .then(res => console.log(res.data));

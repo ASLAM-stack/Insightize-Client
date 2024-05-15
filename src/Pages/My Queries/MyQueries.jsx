@@ -29,7 +29,7 @@ const MyQueries = () => {
     const {data,isLoading,refetch} =useQuery({
         queryKey:['email'],
           queryFn:async () =>{
-            const res= await axios.get(`http://localhost:5000/my_query/${user.email}`,{withCredentials:true})
+            const res= await axios.get(`https://insightize-server.vercel.app/my_query/${user.email}`,{withCredentials:true})
             const data = await res.json()
             return data ;
           }

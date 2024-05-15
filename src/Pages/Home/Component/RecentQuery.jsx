@@ -6,7 +6,7 @@ import RecentCard from "./RecentCard";
 const RecentQuery = () => {
     const [query,setQuery] = useState([])
      useEffect(()=>{
-        fetch('http://localhost:5000/recentadd')
+        fetch('https://insightize-server.vercel.app/recentadd')
         .then(res=> res.json())
         .then(result => {
             setQuery(result)

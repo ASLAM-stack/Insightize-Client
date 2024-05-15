@@ -21,7 +21,7 @@ const MyRECart = ({item , refetch}) => {
           confirmButtonText: "Yes, delete it!",
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:5000/recommended/${_id}`, {
+            fetch(`https://insightize-server.vercel.app/recommended/${_id}`, {
               method: "DELETE",
             })
               .then((res) => res.json())

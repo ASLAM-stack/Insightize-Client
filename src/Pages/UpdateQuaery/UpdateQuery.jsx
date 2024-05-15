@@ -26,7 +26,7 @@ const UpdateQuery = () => {
         const {displayName,email,photoURL} = user;
         const queryInfo = {product_Name,product_Brand,product_Image,query_Title,boycott_Reason,currentDateAndTime}
         console.log(queryInfo);
-        fetch(`http://localhost:5000/update/${_id}`,{
+        fetch(`https://insightize-server.vercel.app/update/${_id}`,{
             method:"PUT",
             headers: {
                 "content-type" : "application/json"

@@ -39,7 +39,7 @@ const QueryDetails = () => {
     const {data,isLoading,refetch} =useQuery({
       queryKey:["queryID"],
         queryFn:async () =>{
-          const res= await fetch(`http://localhost:5000/recommends/${_id}`)
+          const res= await fetch(`https://insightize-server.vercel.app/recommends/${_id}`)
           const data = await res.json()
           return data ;
         }
@@ -59,7 +59,7 @@ const QueryDetails = () => {
     const RecommenderName =user.displayName;
     const RecoInfo = {Recommend_Product_Name,Recommend_Product_Image,Recommend_Product_Title,Recommend_Product_Reason,queryID,productNew_Name,userEmail,userName,RecommenderEmail,RecommenderName,DateAndTime}
     console.log(RecoInfo);
-    fetch('http://localhost:5000/recommend',{
+    fetch('https://insightize-server.vercel.app/recommend',{
             method:"POST",
             headers: {
                 "content-type" : "application/json"
@@ -73,7 +73,7 @@ const QueryDetails = () => {
               let newCount = reCount + 1;
               setReCount(newCount)
 
-              fetch(`http://localhost:5000/product/update/${_id}`,{
+              fetch(`https://insightize-server.vercel.app/product/update/${_id}`,{
                 method:"PUT",
                 headers:{
                   "content-type" : "application/json"
