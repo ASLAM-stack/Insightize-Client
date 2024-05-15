@@ -85,7 +85,7 @@ const LogIN = () => {
                         Log In
                     </title>
                 </Helmet>
-            <div className="md:w-[50%] md:p-20 p-5 w-full  rounded-md shadow logInFOrm">
+            <div className="md:w-[50%] md:p-20 p-5 w-full  rounded-md shadow logInFOrm mb-10 mt-10">
                 <div className="text-center mb-2">
                     <h1 className=" text-4xl font-bold mb-2">Log in</h1>
                     <p className="text-sm dark:text-gray-600">Log in to access your account</p>

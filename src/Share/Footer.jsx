@@ -6,7 +6,7 @@ import logo from '/contact.png'
 
 const Footer = () => {
     return (
-        <div className=" bg-black mt-24">
+        <div className=" bg-black ">
         <footer className="footer p-10 bg-black text-base  text-white">
           <aside>
              <img className="w-[100px]" src={logo} alt="" />

@@ -10,6 +10,8 @@ import MyQueries from "../Pages/My Queries/MyQueries";
 import AddQquery from "../Pages/AddQuery/AddQquery";
 import Queries from "../Pages/Qreuries/Queries";
 import QueryDetails from "../Pages/Qreuries/Component/QueryDetails";
+import RecommendationMe from "../Pages/Recommendation me/RecommendationMe";
+import MyRecomend from "../Pages/My Recommend/MyRecomend";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
           element:<QueryDetails></QueryDetails>,
           loader: ({params}) => fetch(`http://localhost:5000/query/${params.id}`)
           
+        },
+        {
+          path:'/recommendations',
+          element:<RecommendationMe></RecommendationMe>
+        },
+        {
+          path:'/my_recommendatons',
+          element:<MyRecomend></MyRecomend>
         }
       ]
     },

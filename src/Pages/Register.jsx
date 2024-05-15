@@ -102,7 +102,7 @@ const Register = () => {
 
     return (
         <div>
-             <div className="w-full flex items-center justify-center min-h-screen p-2 md:p-0">
+             <div className="w-full flex items-center justify-center min-h-screen p-2 md:p-0 ">
                 <Helmet>
                     <title>
                         Register Now

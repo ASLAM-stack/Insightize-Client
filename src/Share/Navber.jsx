@@ -25,7 +25,7 @@ const Navber = () => {
     }
     console.log(theme);
   return (
-    <div className="shadow">
+    <div className="shadow ">
       <div className="container">
         <div className="navbar bg-base-100">
           <div className="navbar-start">

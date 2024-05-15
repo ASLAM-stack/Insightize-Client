@@ -2,12 +2,12 @@ import logo from '/contact.png'
 
 const Contact = () => {
     return (
-        <div>
+        <div className='bg-[url("/5197214.jpg")] bg-fixed bg-cover rounded mb-24'>
             <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:bg-gray-100 dark:text-gray-800 mt-24 shadow">
 	<div className="flex flex-col justify-between">
 		<div className="space-y-2">
 			<h2 className="text-4xl font-bold leading-tight lg:text-5xl">Join The Movement</h2>
-			<div className="dark:text-gray-600">Take a stand against Israeli products and its unethical practices by joining the boycott today.</div>
+			<div className="dark:text-gray-600 ">Take a stand against Israeli products and its unethical practices by joining the boycott today.</div>
 		</div>
 		<img src={logo} alt="" className="p-6 h-52 md:h-64" />
 	</div>

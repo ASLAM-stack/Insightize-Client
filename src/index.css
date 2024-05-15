@@ -24,6 +24,12 @@ backdrop-filter: blur( 1px );
 border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+/* #root {
+    background:linear-gradient(rgba(0, 0, 0, 0.315),rgba(70, 4, 4, 0.438)) ,url('/7480154.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+     background-position: right;
+} */
 .banner{
     background:linear-gradient(90deg,rgba(0, 0, 0, 0.568),rgba(70, 4, 4, 0.603)) ,url('/banner.jpg');
     background-repeat: no-repeat;

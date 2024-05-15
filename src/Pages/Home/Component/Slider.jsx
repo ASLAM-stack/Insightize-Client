@@ -28,7 +28,7 @@ const Slider = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="bg-[url('slider1.jpg')] space-y-4 w-full pl-4 md:pl-16 h-[500px] bg-cover flex flex-col justify-center bg-center rounded-2xl silder_1" >
+          <div className="bg-[url('/slider1.jpg')] space-y-4 w-full pl-4 md:pl-16 h-[500px] bg-cover flex flex-col justify-center bg-center rounded-2xl silder_1" >
             <div className="space-y-2 border-l-2 pl-4 border-[#c65ce0d2]">
             <Fade direction='down' triggerOnce={true}>
               <p className="text-xl font-medium  text-[#e64210ec]">Welcome to <span className="font-satis"> Insightize</span></p>
@@ -44,7 +44,7 @@ const Slider = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-[url('slider2.jpg')] space-y-4 w-full pl-4 md:pl-16 h-[500px] bg-cover flex flex-col justify-center bg-center rounded-2xl silder_1" >
+          <div className="bg-[url('/slider2.jpg')] space-y-4 w-full pl-4 md:pl-16 h-[500px] bg-cover flex flex-col justify-center bg-center rounded-2xl silder_1" >
             <div className="space-y-2 border-l-2 pl-4 border-[#c65ce0d2]">
             <Slide direction='left' triggerOnce={true}>
               <p className="text-xl font-medium  text-[#e64210ec]">Explore More</p>
@@ -60,7 +60,7 @@ const Slider = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-[url('slider3.jpg')] space-y-4 w-full pl-4 md:pl-16 h-[500px] bg-cover flex flex-col justify-center bg-center rounded-2xl silder_1" >
+          <div className="bg-[url('/slider3.jpg')] space-y-4 w-full pl-4 md:pl-16 h-[500px] bg-cover flex flex-col justify-center bg-center rounded-2xl silder_1" >
             <div className="space-y-2 border-l-2 pl-4 border-[#c65ce0d2]">
             <Fade direction='up' triggerOnce={true}>
               <p className="text-xl font-medium  text-[#e64210ec]">
