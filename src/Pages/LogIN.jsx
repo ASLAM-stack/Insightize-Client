@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { FaGithub } from "react-icons/fa";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import { Link,  useNavigate } from "react-router-dom";
+import { Link,  useLocation,  useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import auth from "../FireBase/firebase.config";
@@ -13,6 +13,7 @@ const LogIN = () => {
     const [show, setShow] = useState(false)
     const { signInUser } = useContext(AuthContext)
     const navigate =useNavigate()
+    const location = useLocation()
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const handleLogin = e => {
@@ -30,7 +31,7 @@ const LogIN = () => {
                 icon: 'success',
                 confirmButtonText: 'Ok'
             });
-            navigate('/')
+            navigate(location?.state ? location?.state : '/')
         })
         .catch(error => {
             console.log(error);
@@ -55,7 +56,7 @@ const LogIN = () => {
                 icon: 'success',
                 confirmButtonText: 'Ok'
             });
-            navigate('/')
+            navigate(location?.state ? location?.state : '/')
         })
         .catch(error => console.error(error))
     }

@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndP
 import { createContext, useEffect, useState } from "react";
 import auth from "../FireBase/firebase.config";
 import { HelmetProvider } from "react-helmet-async";
+import axios from "axios";
 
  
 export const AuthContext = createContext(null)
@@ -48,11 +49,27 @@ const AuthProvider = ({children}) => {
 
     // })
     useEffect (()=>{
-        const unsubscribe = onAuthStateChanged(auth,currentUser=>{
-            setUser(currentUser)
-            setLoader(false)
-        })
-        return () => unsubscribe ();
+        const unSubscribe = onAuthStateChanged(auth, currentUser => {
+            // console.log(currentUser);
+            setLoader(true);
+            const userEmail = { email: currentUser?.email } || user?.email;
+            setUser(currentUser);
+            if (currentUser) {
+              axios
+                .post('http://localhost:5000/jwt', userEmail, {
+                  withCredentials: true,
+                })
+                .then(res => console.log(res.data));
+            } else {
+              axios
+                .post('http://localhost:5000/jwt/logout', userEmail, {
+                  withCredentials: true,
+                })
+                .then(res => console.log(res.data));
+            }
+            setLoader(false);
+          });
+        return () => unSubscribe ();
     },[])
 
 

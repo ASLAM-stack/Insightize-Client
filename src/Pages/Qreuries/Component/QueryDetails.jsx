@@ -149,10 +149,10 @@ const QueryDetails = () => {
         </div>
         <div className="w-full">
           <div>
-            <h1 className="text-4xl text-center font-robo mb-3">Recommendation</h1>
+            <h1 className="md:text-4xl text-2xl text-center font-robo mb-3">Recommendation</h1>
             <div>
               <form onSubmit={handleRecom}>
-                <div className="flex gap-2 ">
+                <div className="flex gap-2 flex-wrap">
                 <div className="space-y-3 w-full">
                   <div>
                     <label

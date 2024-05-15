@@ -12,6 +12,8 @@ import Queries from "../Pages/Qreuries/Queries";
 import QueryDetails from "../Pages/Qreuries/Component/QueryDetails";
 import RecommendationMe from "../Pages/Recommendation me/RecommendationMe";
 import MyRecomend from "../Pages/My Recommend/MyRecomend";
+import UpdateQuery from "../Pages/UpdateQuaery/UpdateQuery";
+import PrivateRouter from "./PrivateRouter";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -32,11 +34,15 @@ const router = createBrowserRouter([
         },
         {
           path:'/my_queries',
-          element:<MyQueries></MyQueries>
+          element:<PrivateRouter>
+            <MyQueries></MyQueries>
+          </PrivateRouter>
         },
         {
           path:'/add_query',
-          element:<AddQquery></AddQquery>
+          element:<PrivateRouter>
+            <AddQquery></AddQquery>
+          </PrivateRouter>
         },
         {
           path:'/queries',
@@ -45,17 +51,29 @@ const router = createBrowserRouter([
         },
         {
           path:'/queryDetails/:id',
-          element:<QueryDetails></QueryDetails>,
+          element:<PrivateRouter>
+            <QueryDetails></QueryDetails>
+          </PrivateRouter>,
           loader: ({params}) => fetch(`http://localhost:5000/query/${params.id}`)
           
         },
         {
           path:'/recommendations',
-          element:<RecommendationMe></RecommendationMe>
+          element:<PrivateRouter>
+            <RecommendationMe></RecommendationMe>
+          </PrivateRouter>
         },
         {
           path:'/my_recommendatons',
-          element:<MyRecomend></MyRecomend>
+          element:<PrivateRouter>
+            <MyRecomend></MyRecomend>
+          </PrivateRouter>,
+          
+        },
+        {
+          path:'/update/:id',
+          element:<UpdateQuery></UpdateQuery>,
+          loader: ({params}) => fetch(`http://localhost:5000/query/${params.id}`)
         }
       ]
     },

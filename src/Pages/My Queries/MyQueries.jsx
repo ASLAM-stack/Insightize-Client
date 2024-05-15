@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useQuery } from "@tanstack/react-query";
 import MyQueryCart from "./Component/MyQueryCart";
+import axios from "axios";
+import Loading from "../../Share/Loading";
+import NoData from "../../Share/NoData";
 
  
 
@@ -26,7 +29,7 @@ const MyQueries = () => {
     const {data,isLoading,refetch} =useQuery({
         queryKey:['email'],
           queryFn:async () =>{
-            const res= await fetch(`http://localhost:5000/my_query/${user.email}`)
+            const res= await axios.get(`http://localhost:5000/my_query/${user.email}`,{withCredentials:true})
             const data = await res.json()
             return data ;
           }
@@ -72,9 +75,23 @@ const MyQueries = () => {
   sort == 2 ? 'md:grid-cols-2' :
   sort == 3 ? 'md:grid-cols-3' :
   ''} gap-5 grid-cols-1 p-2 md:p-0`}>
-                {
-                    data?.map(item =><MyQueryCart key={item._id} item={item}></MyQueryCart>)
-                }
+{
+    isLoading ? (
+        <Loading />
+    ) : !data ? (
+        <NoData />
+    ) : data.length === 0 ? (
+        <NoData />
+    ) : (
+        data.map(item => (
+            <MyQueryCart
+                key={item._id}
+                item={item}
+                refetch={refetch}
+            />
+        ))
+    )
+}
             </div>
         </div>
         </div>
