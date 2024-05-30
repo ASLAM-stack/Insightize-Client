@@ -3,6 +3,7 @@ import Banner from "./Component/Banner";
 import Contact from "./Component/Contact";
 import Slider from "./Component/Slider";
 import RecentQuery from "./Component/RecentQuery";
+import Review from "../Review/Review";
 
  
 
@@ -17,6 +18,7 @@ const Home = () => {
             <RecentQuery></RecentQuery>
             <Banner></Banner>
             <Contact></Contact>
+            <Review></Review>
         </div>
     );
 };
