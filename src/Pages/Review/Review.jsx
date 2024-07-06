@@ -17,7 +17,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 const Review = () => {
     const [review, setRiew] = useState([]);
     useEffect(() => {
-      fetch('https://insightize-server-fjoy55xri-arif-hossain-aslams-projects.vercel.app/review')
+      fetch('https://insightize-server.vercel.app/review')
         .then((res) => res.json())
         .then((data) => {
           setRiew(data);
